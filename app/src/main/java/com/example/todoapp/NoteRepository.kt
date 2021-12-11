@@ -4,7 +4,8 @@ import androidx.lifecycle.LiveData
 
 class NoteRepository(private val noteDao: NoteDao) {
     val allnotes: LiveData<List<Note>> = noteDao.getAllNotes()
-    suspend fun insert(note: Note){
+
+    suspend fun insert(note: Note) {
         noteDao.insert(note)
     }
     suspend fun delete(note : Note){
@@ -12,6 +13,7 @@ class NoteRepository(private val noteDao: NoteDao) {
     }
     suspend fun markAsCompleted(noteId:Int) = noteDao.markAsCompleted(noteId)
     suspend fun markAsunCompleted(noteId:Int) = noteDao.markAsunCompleted(noteId)
-    var completedsize : LiveData<List<Note>> = noteDao.getcompletedsize()
+    suspend fun reset() = noteDao.reset()
+    var completedlist : LiveData<List<Note>> = noteDao.getcompletedlist()
 
 }

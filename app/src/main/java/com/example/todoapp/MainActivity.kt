@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), InNotesRVAdapter {
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(NoteViewModel::class.java)
-        viewModel.completedcount.observe(this, {list -> list?.let {
+        viewModel.completedlist.observe(this, {list -> list?.let {
             done_count = it.size
             this.findViewById<TextView>(R.id.changer).text = "$done_count Tasks Completed"
         }})
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), InNotesRVAdapter {
                 val circularProgressBar = findViewById<CircularProgressBar>(R.id.progress_circular)
                 circularProgressBar.apply {
                     progressMax = 100f
-                    if(total_task>0) {
+                    if(done_count>0) {
                         percent = ((done_count).toDouble()/(total_task + done_count).toDouble()*100)
                         val number3digits:Double = Math.round(percent * 1000.0) / 1000.0
                         val number2digits:Double = Math.round(number3digits * 100.0) / 100.0

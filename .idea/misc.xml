@@ -5,7 +5,7 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/drawable/ic_task_done.xml" value="0.18333333333333332" />
-        <entry key="app/src/main/res/layout/activity_completed_tasks.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/layout/activity_completed_tasks.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2265625" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.1" />
       </map>

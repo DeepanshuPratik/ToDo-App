@@ -170,7 +170,7 @@
         android:layout_height="wrap_content"
         app:maxImageSize="70dp"
         android:backgroundTint="@color/white"
-        android:layout_margin="30dp"
+        android:layout_margin="60dp"
         android:src="@drawable/ic_add_circle"
         app:layout_anchor="@id/bottomappbar"
         />

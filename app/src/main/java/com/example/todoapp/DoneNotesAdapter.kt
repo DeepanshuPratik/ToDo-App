@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
 class DoneNotesAdapter (private val context: Context, private val listener: DoneNotesRVAdapter) : RecyclerView.Adapter<DoneNotesAdapter.NoteViewHolder>(){
-    val completed = ArrayList<Note>()
+    var completed = listOf<Note>()
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val linearLayout = itemView.findViewById<ConstraintLayout>(R.id.recyclerlayout)
         val textView = itemView.findViewById<TextView>(R.id.text)!!
