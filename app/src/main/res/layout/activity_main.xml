@@ -140,7 +140,30 @@
         android:backgroundTint="@color/design_default_color_on_secondary"
         android:fitsSystemWindows="true"
         app:fabCradleRoundedCornerRadius="50dp"
-        tools:ignore="BottomAppBar" />
+        tools:ignore="BottomAppBar" >
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:layout_width="400dp"
+            android:id="@+id/bar"
+            android:layout_height="45dp">
+            <ImageView
+                android:layout_marginStart="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_task_done"
+                android:id="@+id/taskcompletedlist"
+                android:clickable="true"
+                android:focusable="true" />
+            <ImageView
+                android:layout_marginStart="200dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_share"
+                android:id="@+id/lol"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+    </com.google.android.material.bottomappbar.BottomAppBar>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"

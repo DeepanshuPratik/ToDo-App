@@ -6,13 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.constraintlayout.solver.state.State
-import androidx.constraintlayout.widget.ConstraintAttribute
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -52,17 +47,15 @@ class NotesRVAdapter(private val context: Context, private val listener: InNotes
         notifyDataSetChanged()
         return headtext
     }
-    fun update_total_count() : Int{
-        return itemCount
-    }
-    fun updatetick(newList: List<Note>,count: Int) : String{
-        allNotes.clear()
-        allNotes.addAll(newList)
-        val count1= count
-        val headtext = "$count1 Tasks Done"
-        notifyDataSetChanged()
-        return headtext
-    }
+
+//    fun updatetick(newList: List<Note>, count: Int) : String{
+//        allNotes.clear()
+//        allNotes.addAll(newList)
+//        val count1= count
+//        val headtext = "$count1 Tasks Done"
+//        notifyDataSetChanged()
+//        return headtext
+//    }
 
 }
 

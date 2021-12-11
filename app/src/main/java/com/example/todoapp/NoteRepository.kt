@@ -10,4 +10,8 @@ class NoteRepository(private val noteDao: NoteDao) {
     suspend fun delete(note : Note){
         noteDao.delete(note)
     }
+    suspend fun markAsCompleted(noteId:Int) = noteDao.markAsCompleted(noteId)
+    suspend fun markAsunCompleted(noteId:Int) = noteDao.markAsunCompleted(noteId)
+    var completedsize : LiveData<List<Note>> = noteDao.getcompletedsize()
+
 }

@@ -11,7 +11,6 @@ class addactivitylayout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addactivitylayout)
-        var num = intent.getIntExtra("total_fixed",0)
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
@@ -57,16 +56,11 @@ class addactivitylayout : AppCompatActivity() {
             findViewById<ImageView>(R.id.red).setImageResource(R.drawable.ic_baseline_circle_24)
             findViewById<ImageView>(R.id.yellow).setImageResource(R.drawable.ic_check_circleyellow)
         }
-        val intent= Intent(this, MainActivity::class.java)
-        intent.putExtra("num",num)
-//        intent.putExtra("color",color)
         findViewById<Button>(R.id.submitb).setOnClickListener {
             val text = findViewById<EditText>(R.id.input).text.toString()
             if (text.isNotEmpty()) {
-                viewModel.insertNode(Note(text,color))
-                num+=1   //
+                viewModel.insertNode(Note(text,color,0))
                 Toast.makeText(this, "$text inserted!", Toast.LENGTH_LONG).show()
-                startActivity(intent)
             }
             finish()
         }
