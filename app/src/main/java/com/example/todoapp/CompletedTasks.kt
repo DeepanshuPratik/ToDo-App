@@ -1,5 +1,6 @@
 package com.example.todoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +19,8 @@ class CompletedTasks : AppCompatActivity(), DoneNotesRVAdapter {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_completed_tasks)
         findViewById<Button>(R.id.Back).setOnClickListener{
-            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         viewModel = ViewModelProvider(

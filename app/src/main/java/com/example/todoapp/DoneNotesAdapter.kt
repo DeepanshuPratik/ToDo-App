@@ -31,6 +31,7 @@ class DoneNotesAdapter (private val context: Context, private val listener: Done
         val currentNote = completed[position]
         holder.linearLayout.setBackgroundColor(Color.parseColor(currentNote.color))
         holder.textView.text=currentNote.text
+        holder.deleteButton.setImageResource(R.drawable.ic_check_circle_)
 //        holder.textView.setBackgroundColor(Color.parseColor(currentNote.color))
     }
 
